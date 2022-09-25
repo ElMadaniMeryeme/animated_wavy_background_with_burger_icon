@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+.menu-icon {
+  left: 35px;
+  top: 35px;
+  width: 40px;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+}
+.menu-icon span {
+  background-color: black;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.menu-icon span:first-child {
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  top: 9px;
+}
+.menu-icon span:last-child {
+  top: 18px;
+}
+.menu-icon:hover span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon:hover span:first-child,
+.menu-icon:hover span:last-child {
+  top: 9px;
+  background-color: red;
+}
+.menu-icon:hover span:first-child {
+  transform: rotate(45deg);
+}
+.menu-icon:hover span:last-child {
+  transform: rotate(-45deg);
+}
+.page {
+  height: 100vh;
+}
+.page::before {
+  content: "";
+  position: fixed;
+  width: 300%;
+  height: 100%;
+  background-color: #0075ff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) skew(0, -10deg);
+  border-radius: 50%;
+  z-index: -1;
+  animation: waving 5s ease-in-out infinite alternate;
+}
+.card {
+  width: 300px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd inset;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.card h2 {
+  margin: 0;
+}
+.card p {
+  margin: 0;
+}
+@keyframes waving {
+  from {
+    transform: translateX(-50%) skew(0, -10deg);
+  }
+  to {
+    transform: translateX(-30%) skew(10deg, 0);
+  }
+}
