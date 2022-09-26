@@ -1,5 +1,4 @@
-# animated_wavy_background_with_burger_icon
-Animated Wavy Background with Burger Icon Effects - Elzero Web School Tutorial
+# Project 6 - Elzero Web School Tutorials
 
 In this repo., I used the techniques in the following videos: 
 
